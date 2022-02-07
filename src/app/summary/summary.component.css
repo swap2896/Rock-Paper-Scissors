@@ -1,0 +1,7 @@
+.header-spacing{
+    padding: 10px;
+    color:orange;
+    background-color: black;
+    max-height: 60px;
+    min-height: 60px;
+  }

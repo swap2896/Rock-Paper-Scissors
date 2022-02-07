@@ -1,0 +1,27 @@
+<mat-toolbar class="header-spacing">Final Result</mat-toolbar><br>
+<table class="table table-bordered">
+    <tbody>
+        <tr>
+            <td>Winner</td>
+            <td style="color: green;" *ngIf="data.user_wins>data.computer_wins">You won!</td>
+            <td style="color: red;" *ngIf="data.computer_wins>data.user_wins">Computer won!</td>
+            <td style="color: orange;" *ngIf="data.computer_wins==data.user_wins">Match Tied!</td>
+        </tr>
+        <tr>
+            <td>Number of Rounds</td>
+            <td>{{data.number_of_rounds}}</td>
+        </tr>
+        <tr>
+            <td>Number of Rounds won by you</td>
+            <td>{{data.user_wins}}</td>
+        </tr>
+        <tr>
+            <td>Number of Rounds won by Computer</td>
+            <td>{{data.computer_wins}}</td>
+        </tr>
+        <tr>
+            <td>Number of Rounds Tied</td>
+            <td>{{data.tied_rounds}}</td>
+        </tr>
+    </tbody>
+</table>
