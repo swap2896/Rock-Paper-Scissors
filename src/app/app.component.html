@@ -1,47 +1,49 @@
 <mat-toolbar class="header"><span style="text-align: center; font-size: x-large; ">
-  Welcome To Rock Paper Scissors Game</span></mat-toolbar><br>
-
-<div style="text-align: center; color: red; font-size: x-large;">ROUND {{number_of_rounds}}</div><br>
-<div style="text-align: center;"><button mat-raised-button style="background-color: black; color: orange;" (click)="summary()">Quit Game/View Final Result</button></div><br>
-<div style="text-align: center; color: green; font-size: x-large;">Scores</div>
-
-<div class="float-container">
-  <div class="float-child1">
-    <div style="text-align: center; color: black; font-size: x-large;">Win:{{user_wins}}<br><br>
-      <div *ngIf="user_choice=='rock'" class="container" style=" text-align: center; border: 1px solid black;">
-        <img src="assets/rock.PNG" width="350" height="250">Rock
-      </div>
-      <div *ngIf="user_choice=='paper'" class="container" style=" text-align: center; border: 1px solid black;">
-        <img src="assets/paper.PNG" width="350" height="250">Paper
-      </div>
-      <div *ngIf="user_choice=='scissors'" class="container" style=" text-align: center; border: 1px solid black;">
-        <img src="assets/scissors.PNG" width="350" height="250">Scissors
-      </div>
-  </div><br>
-  <div style="text-align: center; color: black; font-size: x-large;">You</div><br>
-  <div class="button-row" style="text-align: center;">
-    <button mat-raised-button style="background-color: black; color: orange;" (click)="change_user_choice('rock')">Rock</button>&nbsp;
-    <button mat-raised-button style="background-color: black; color: orange;" (click)="change_user_choice('paper')">Paper</button>&nbsp;
-    <button mat-raised-button style="background-color: black; color: orange;" (click)="change_user_choice('scissors')">Scissors</button>
-  </div><br>
-
+  Rock Paper Scissor</span></mat-toolbar><br>
+  
+  <div style="text-align: center; color: red; font-size: x-large;">ROUND {{number_of_rounds}}</div><br>
+  <div style="text-align: center;"><button mat-raised-button style="background-color: black; color: orange;" (click)="summary()">Quit Game/View Final Result</button></div><br>
+  <div style="text-align: center; color: green; font-size: x-large;">Scores</div>
+  
+  <div class="float-container">
+    <div class="float-child1">
+      <div style="text-align: center; color: black; font-size: x-large;">Win:{{user_wins}}<br><br>
+        <div *ngIf="user_choice=='rock'" class="container" style=" text-align: center; border: 1px solid black;">
+          <img src="assets/rock.PNG">Rock
+        </div>
+        <div *ngIf="user_choice=='paper'" class="container" style=" text-align: center; border: 1px solid black;">
+          <img src="assets/paper.PNG" >Paper
+        </div>
+        <div *ngIf="user_choice=='scissors'" class="container" style=" text-align: center; border: 1px solid black;">
+          <img src="assets/scissors.PNG">Scissor
+        </div>
+    </div><br>
+    <div style="text-align: center; color: black; font-size: x-large;">You</div><br>
+    <div class="button-row" style="text-align: center;">
+      <button mat-fab style="background-color: black; color: orange;" (click)="change_user_choice('rock')">Rock</button>&nbsp;
+      <button mat-fab style="background-color: black; color: orange;" (click)="change_user_choice('paper')">Paper</button>&nbsp;
+      <button mat-fab style="background-color: black; color: orange;" (click)="change_user_choice('scissors')">Scissor</button>
+    </div><br>
+  
+    </div>
+  
+    <div class="float-child2">
+      <div style="text-align: center; color: black; font-size: x-large;">Win:{{computer_wins}}<br><br>
+        <div *ngIf="computer_choice=='null'" class="container" style=" text-align: center;">
+          <mat-spinner [diameter]="150" style="text-align: center;"></mat-spinner>
+        </div>
+        <div *ngIf="computer_choice=='rock'" class="container" style=" text-align: center;border: 1px solid black;">
+          <img src="assets/rock.PNG">Rock
+        </div>
+        <div *ngIf="computer_choice=='paper'" class="container" style=" text-align: center; border: 1px solid black;">
+          <img src="assets/paper.PNG">Paper
+        </div>
+        <div *ngIf="computer_choice=='scissors'" class="container" style=" text-align: center; border: 1px solid black;">
+          <img src="assets/scissors.PNG">Scissor
+        </div>
+    </div><br>
+    <div style="text-align: center; color: black; font-size: x-large;">Computer</div>
+    </div>
   </div>
-
-  <div class="float-child2">
-    <div style="text-align: center; color: black; font-size: x-large;">Win:{{computer_wins}}<br><br>
-      <div *ngIf="computer_choice=='null'" class="container" style=" text-align: center">
-        <mat-spinner [diameter]="150" style="text-align: center;"></mat-spinner>
-      </div>
-      <div *ngIf="computer_choice=='rock'" class="container" style=" text-align: center;border: 1px solid black;">
-        <img src="assets/rock.PNG" width="350" height="250">Rock
-      </div>
-      <div *ngIf="computer_choice=='paper'" class="container" style=" text-align: center; border: 1px solid black;">
-        <img src="assets/paper.PNG" width="350" height="250">Paper
-      </div>
-      <div *ngIf="computer_choice=='scissors'" class="container" style=" text-align: center; border: 1px solid black;">
-        <img src="assets/scissors.PNG" width="350" height="250">Scissors
-      </div>
-  </div><br>
-  <div style="text-align: center; color: black; font-size: x-large;">Computer</div>
-  </div>
-</div>
+  <router-outlet></router-outlet>
+  
