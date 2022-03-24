@@ -1,5 +1,5 @@
 <<<<<<< HEAD
-# Rock-Paper-Scissors
+# Rock-Paper-Scissors (DEMO -> http://rock-paper-scissors-ap.herokuapp.com/)
 A simple Rock Paper Scissors game using Angular material and Typescript.
 =======
 # RockPaperScissors
